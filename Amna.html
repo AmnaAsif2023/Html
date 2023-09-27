@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Student Grading Calculator</h1> 
+   <form onsubmit="abc(); return false;">
+<label for="Tm">Total Marks</label>
+<input type="number" name="Tm" id="Tm">
+<label for="Ob">Obtained Marks</label>
+<input type="number" name="Ob" id="Ob">
+<button type="submit">Click</button>
+   </form>
+<p id="text"></p>
+   <script>
+function abc() {
+    let stdTotal_Marks = document.querySelector("#Tm").value;
+let stdobt_Marks = document.querySelector("#Ob").value;
+score = (stdobt_Marks / stdTotal_Marks) * 100
+    if (score >= 90) {
+        document.querySelector("#text").innerHTML=("A")
+  } else if (score >= 80) {
+    document.querySelector("#text").innerHTML=("B")
+  } else if (score >= 70) {
+    document.querySelector("#text").innerHTML=("C")
+  } else if (score >= 60) {
+    document.querySelector("#text").innerHTML=("D")
+  } else {
+    document.querySelector("#text").innerHTML=("F")
+  }
+}
+   </script>
+</body>
+</html>
