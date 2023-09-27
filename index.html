@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Temperature Calculator</h1> 
+   <form onsubmit="abc(); return false;">
+<label for="Tm">Temperature</label>
+<input type="number" name="Tm" id="Tm">
+<button type="submit">Click</button>
+   </form>
+<p id="text"></p>
+   <script>
+function abc() {
+    let Temperature = document.querySelector("#Tm").value;
+    if (Temperature >= 30 && Temperature <= 40) {
+        document.querySelector("#text").innerHTML=("It is Hot Today")
+  } else if (Temperature >= 20 && Temperature < 30) {
+    document.querySelector("#text").innerHTML=("It is Sunshine Today")
+  } else if (Temperature >= 10 && Temperature < 20) {
+    document.querySelector("#text").innerHTML=("It is Normal Today")
+  } else if (Temperature >= 1 && Temperature < 30) {
+    document.querySelector("#text").innerHTML=("It is Sunshine Today")
+  } else {
+    document.querySelector("#text").innerHTML=("Not Valid")
+  }
+}
+   </script>
+</body>
+</html>
